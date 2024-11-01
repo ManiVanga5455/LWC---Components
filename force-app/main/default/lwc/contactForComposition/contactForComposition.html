@@ -1,0 +1,27 @@
+<template>
+<template lwc:if={contact}>
+<lightning-layout vertical-align="center">
+    <lightning-layout-item>
+        <lightning-icon  icon-name="standard:avatar"
+        alternative-text="Missing profile photo"
+        size="large"
+        title="Missing profile photo" >
+    </lightning-icon>
+    </lightning-layout-item>
+    <lightning-layout-item padding="around-medium">
+       <p style="color: blue; font-size:medium "> <b>{contact.FirstName}</b></p>
+       <p>{contact.Title}</p>
+        <p><lightning-formatted-phone value={contact.Phone}>
+         </lightning-formatted-phone></p>
+         <p>{contact.Email}</p>
+    </lightning-layout-item>
+<!--<lightning-layout-item padding="around-large">
+        <p>{contact.AccountId}</p>
+        <p>{contact.MailingAddress}</p>
+    </lightning-layout-item>-->
+</lightning-layout>
+</template>
+<template lwc:else>
+    <p>No data available</p>
+</template>
+</template>

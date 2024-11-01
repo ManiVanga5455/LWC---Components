@@ -1,0 +1,17 @@
+<template>
+<lightning-layout  vertical-align="center">
+        <lightning-layout-item>
+             <img 
+            src={info.pic}
+            alt="Profile photo" />
+        </lightning-layout-item>
+        <lightning-layout-item padding="around-small">
+            <p class="slds-m-left_small">{displayGreeting},</p>  
+            <p class="slds-m-left_small"><b>{info.name}</b></p>
+            <p class="slds-m-left_small">{info.role}</p>
+            <p class="slds-m-left_small">{info.phone}</p>
+            <p class="slds-m-left_small"><lightning-formatted-email value={info.email}></lightning-formatted-email></p>
+            <p class="slds-m-left_small">{welcomeMessage}</p>
+        </lightning-layout-item>
+</lightning-layout>    
+</template>

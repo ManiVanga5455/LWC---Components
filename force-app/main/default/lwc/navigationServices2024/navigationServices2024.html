@@ -1,0 +1,37 @@
+<template>
+    <lightning-card title="Navigation Services" icon-name="custom:custom63">
+        <div class="slds-grid slds-wrap slds-grid_align-space slds-p-horizontal_small">
+            <div class="slds-col slds-size_3-of-12 slds-p-horizontal_x-small">
+                <lightning-button 
+                    label="Go to Home Page" 
+                    variant="brand"
+                    onclick={navigateToHome}>
+                </lightning-button> 
+            </div>
+
+            <div class="slds-col slds-size_3-of-12 slds-p-horizontal_x-small">
+                <lightning-button 
+                    label="Go to List Page" 
+                    variant="brand"
+                    onclick={navigateToList}>
+                </lightning-button>  
+            </div>
+
+            <div class="slds-col slds-size_3-of-12 slds-p-horizontal_x-small">
+                <lightning-button 
+                    label="Create Account" 
+                    variant="brand"
+                    onclick={accountCreationHandler}>
+                </lightning-button>
+            </div>
+
+            <div class="slds-col slds-size_3-of-12 slds-p-horizontal_x-small">
+                <lightning-button 
+                    label="Create Contact" 
+                    variant="brand"
+                    onclick={contactCreationHandler}>
+                </lightning-button>
+            </div>    
+        </div>
+    </lightning-card>
+</template>

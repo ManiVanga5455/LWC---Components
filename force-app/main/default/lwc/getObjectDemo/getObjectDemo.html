@@ -1,0 +1,14 @@
+<template>
+    <lightning-card title="Object Metadata Demo">
+        <template if:true={accInfo}>
+            
+            <ul>
+                <template for:each={accInfo.childRelationships} for:item="relationship">
+                    <li key={relationship.relationshipName}>
+                        <strong>{relationship.relationshipName}</strong> (Child Object: {relationship.childObjectApiName})
+                    </li>
+                </template>
+            </ul>
+        </template>
+    </lightning-card>
+</template>

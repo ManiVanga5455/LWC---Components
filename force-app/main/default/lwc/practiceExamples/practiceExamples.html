@@ -1,0 +1,63 @@
+<template>
+<lightning-card title="Example 1">
+    <div class = "slds-var-m-around_medium">
+    <lightning-input type="Text" label="Enter Your Name" onkeyup={eventHandler}></lightning-input>
+    Hello {name},  Welcome to Salesforce....
+     </div>
+</lightning-card>
+<lightning-card title="Example 1">
+    <div class = "slds-var-m-around_medium">
+    <lightning-input type="number" label="Enter Principal Amount" value= {principal} onchange={iHandler}></lightning-input>
+   <lightning-input type="number" label="Rate of Interest" value= {rate} onchange={iHandler}></lightning-input>
+   <lightning-input type="number" label="Period" value= {time} onchange={iHandler}></lightning-input>
+</div>
+<lightning-button label="Next" variant="brand" onclick={calculate}></lightning-button>
+  
+<div class="slds-var-m-around_medium">
+    Hello your total Amount is {result}
+</div>
+    
+</lightning-card>
+<lightning-card title="Count of Charecters">
+<div class="slds-m-around_medium">
+    <lightning-textarea lwc:ref="input1"
+     label="Enter some text" 
+     placeholder="Type here..."
+     rows="5"
+     onkeyup={countHandler}></lightning-textarea>
+</div>
+<div class="slds-m-around_medium"> <b lwc:ref="charCount">0</b> </div>
+
+</lightning-card>
+<lightning-card title="Unit Converter (Length)">
+<div class="slds-m-around_medium">
+<lightning-input type="Number" 
+label="Enter Value (in Inches)"
+onchange={unitHandler}>
+</lightning-input>
+</div>
+<div class="slds-m-around_medium"><b>{resultscm} centimeters</b></div>
+</lightning-card>
+<lightning-card title="Contact Form">
+    <div class="slds-m-around_medium">
+<form>
+    <lightning-input type="Text" label="Name"
+     placeholder="Enter Your Name" 
+     required="" >
+    </lightning-input>
+    <lightning-input type="email" label="Email address"
+     required="" pattern={emailRegex} ></lightning-input>
+     <lightning-textarea lwc:ref="input1"
+     label="Enter some text" 
+     placeholder="Type here..."
+     rows="2"></lightning-textarea>
+     <lightning-button lable="Submit"
+     variant="Brand" 
+     onclick={validHandler}>
+     </lightning-button>
+</form>
+</div>
+</lightning-card>
+
+
+</template>

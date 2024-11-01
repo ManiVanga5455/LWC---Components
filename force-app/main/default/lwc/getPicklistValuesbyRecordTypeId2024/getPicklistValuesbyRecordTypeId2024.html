@@ -1,0 +1,25 @@
+<template>
+    <lightning-card title="Get Picklist Values By RecordType Id" icon-name="custom:custom63">
+        <div   class="slds-p-around_small">
+            <p>This helps to fetch all piclist values from an Object by specifying ObjectApiName</p>
+        </div>
+        <div class="slds-p-around_small">
+    <template if:true={picklistValues.data}>
+        <lightning-combobox
+            label="Active"
+            placeholder="Select Value"
+            options={picklistValues.data.picklistFieldValues.Active__c.values}>
+        </lightning-combobox>
+        <lightning-combobox
+             label="Industry"
+             placeholder="Select Value"
+             options={picklistValues.data.picklistFieldValues.Industry.values}>
+        </lightning-combobox>
+        <lightning-combobox
+             label="Rating"
+             placeholder="Select Value"
+             options={picklistValues.data.picklistFieldValues.Rating.values}>
+        </lightning-combobox>
+    </template></div>
+    </lightning-card>
+</template>

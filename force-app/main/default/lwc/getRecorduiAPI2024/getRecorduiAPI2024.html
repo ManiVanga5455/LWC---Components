@@ -1,0 +1,18 @@
+<template>
+    <lightning-card title="Get Record Data">
+        <div class="slds-m-around_medium">
+            <lightning-input   
+              type="text"
+              label="Enter Account Id"
+              value={recordId}
+              class="recordValue"
+              onchange={handleRecordIdChange}>
+            </lightning-input>
+        </div>
+        <div class="record-details">
+            <p>Account Name: {name}</p>
+            <p>Account Phone: {phone}</p>
+            <p>Account Annual Revenue: {annualRevenue}</p>
+        </div>
+    </lightning-card>
+</template>

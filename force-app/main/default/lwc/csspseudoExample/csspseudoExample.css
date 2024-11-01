@@ -1,0 +1,33 @@
+p{
+    color: black;
+    font-style: italic;
+    font-size: large;
+}
+
+p:enabled{
+    background-color: red;
+}
+.Demo:read-write {
+    background-color: ivory;
+    border: 2px solid darkorange;
+    border-radius: 5px;
+  }
+  p:after {
+    content: " <- EXCITING!";
+    color: green;
+  }
+  .Demo::selection {
+    color: red;
+    background-color: yellow;
+  }
+  .Demo::spelling-error{
+    text-decoration: wavy;
+  }
+  .Demo:first-line {
+    color: #ff0000;
+ }
+li::marker{
+  color: red;
+  font-size: 23px;
+  padding-bottom: 0%;
+}

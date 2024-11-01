@@ -1,0 +1,29 @@
+<template>
+<lightning-card variant="Narrow" title="track Decorator" icon-name="standard:collection">
+<div class="slds-p-horizontal_small">
+    <p>{greeting}</p>
+    <p><b>Without @track: </b>{greetingMessage}</p> 
+    <p><b>With @track: </b>{info.description}</p>
+</div>
+<div class="slds-p-top_medium">
+    <lightning-button variant="brand"
+label="No @track" 
+onclick={noTrackHandler}
+icon-name="custom:custom12" 
+class="slds-m-left_x-small">
+    </lightning-button>
+        <lightning-button variant="brand"
+label="@track" 
+onclick={trackHandler}
+icon-name="custom:custom12" 
+class="slds-m-left_x-small">
+    </lightning-button>
+        <lightning-button variant="brand"
+label="Hide Info" 
+onclick={hideHandler}
+icon-name="custom:custom12" 
+class="slds-m-left_x-small">
+    </lightning-button>
+</div>
+</lightning-card>
+</template>

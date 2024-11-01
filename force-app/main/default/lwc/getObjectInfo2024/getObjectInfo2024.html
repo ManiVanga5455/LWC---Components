@@ -1,0 +1,34 @@
+<template>
+  <lightning-card title="Create Case Form" icon-name="standard:case">
+    <div class="slds-p-around_medium">
+      <template if:true={isLoaded}>
+        <template if:true={caseFields.Subject}>
+          <lightning-input
+            label={caseFields.Subject.label}
+            type="text"
+            required={caseFields.Subject.required}
+            placeholder="Enter Case Subject"
+          ></lightning-input>
+        </template>
+
+        <template if:true={caseFields.Description}>
+          <lightning-textarea
+            label={caseFields.Description.label}
+            placeholder="Enter Case Description"
+          ></lightning-textarea>
+        </template>
+      </template>
+
+      <template if:false={isLoaded}>
+        <p>Loading case fields...</p>
+      </template>
+    </div>
+    <div class="slds-align_absolute-center">
+      <lightning-button
+        variant="brand"
+        label="Create Case"
+        onclick={createCase}
+      ></lightning-button>
+    </div>
+  </lightning-card>
+</template>

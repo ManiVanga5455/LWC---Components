@@ -1,0 +1,22 @@
+<template>
+    <lightning-card title="Custom Label with PlatformResource">
+        <div class="slds-m-around_medium">
+        <p class="animate__flip animate__delay-5s">
+            {userName}</p>
+        </div>
+    </lightning-card>
+
+    <lightning-card title="Static Resources">
+        <div class="slds-p-around_medium">
+            <img src={myImage} alt="My Image" style="width: 150px; height: 150px;" />
+        </div>
+    </lightning-card>
+
+    <lightning-card title="User Resources">
+        <div class="slds-p-around_medium" style="background-color: beige;">
+            <p>User Id: {userId}</p>
+            <p>User Name: {userName}</p>
+            <p>User Email: {userEmail}</p>
+        </div>
+    </lightning-card>
+</template>

@@ -1,0 +1,12 @@
+<template>
+    <a href="#" onclick={clickHandler} class="contact-item">
+        <lightning-layout vertical-align="center">
+            <lightning-layout-item size="5">
+                <img src={contact.PhotoUrl} alt="Profile photo" class="contact-photo"/>
+            </lightning-layout-item>
+            <lightning-layout-item size="7">
+                <p class="contact-name">{contact.Name}</p>
+            </lightning-layout-item>
+        </lightning-layout>
+    </a>
+</template>

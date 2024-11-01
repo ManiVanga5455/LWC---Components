@@ -1,0 +1,37 @@
+<template>
+<lightning-card title = "Navigation Component examples" class="slds-m=around_medium">
+<div class="slds-grid slds-wrap">
+<div class="slds-col slds-size_1-of-5" title="Navigate to Homepage">
+    <lightning-button label="Go to Homepage"
+     variant="brand"
+    onclick={homePageHandler}>
+    </lightning-button>
+</div>
+<div class="slds-col slds-size_1-of-5">
+    <lightning-button label="Go to Object"
+    variant="brand"
+   onclick={objectPageHandler}>
+   </lightning-button>
+</div>
+<div class="slds-col slds-size_1-of-5">
+    <lightning-button label="Go to object"
+    variant="brand"
+   onclick={defaultObjectPageHandler}>
+   </lightning-button>
+</div>
+
+<div class="slds-col slds-size_1-of-5">
+    <lightning-button label="Go to WebPage"
+    variant="brand"
+   onclick={webPageHandler}>
+   </lightning-button>
+</div>
+<div class="slds-col slds-size_1-of-5">
+    <lightning-button label="Go to Lwc"
+    variant="brand"
+   onclick={lwcHandler}>
+   </lightning-button>
+</div>
+</div>
+</lightning-card>
+</template>

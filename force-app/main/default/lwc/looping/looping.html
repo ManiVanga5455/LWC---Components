@@ -1,0 +1,24 @@
+<template>
+<lightning-card title="For:each Looping">
+<div class="slds-m-around_medium">
+<template for:each={stlist} for:item="student">
+<ul key={stud}
+class="slds-has-dividers_around-space">
+<li class="slds-item" >{student}</li>
+</ul>
+</template>
+</div>
+</lightning-card>
+
+<lightning-card title="For:each Looping">
+    <div class="slds-m-around_medium">
+    <template for:each={stDetailList} for:item="stDetails">
+    <ul key={stDetails.rNo}
+    class="slds-has-dividers_around-space">
+    <li class="slds-item" >{stDetails.rNo}-{stDetails.name}-{stDetails.City}</li>
+    </ul>
+    </template>
+    </div>
+    </lightning-card>
+
+</template>

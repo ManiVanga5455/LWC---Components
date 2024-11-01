@@ -1,0 +1,59 @@
+<template>
+<lightning-card title = 'One Way Binding' icon-name="custom:custom14" >
+  <div class = "slds-var-m-around_medium ">
+Students : 
+My name is {myname}, This is my 1st example for One Way Binding..
+It shows one way binding. Variable myname is declared in JS</div>
+</lightning-card>
+<lightning-card title="Two Way Binding">
+  <div class = "slds-var-m-around_medium ">
+  This is my 2nd example whic explains Two way Data Binding. In this example
+  html communicate with JS and JS communicate with html 
+  We need an Input component to communicate JS frm html 
+  <lightning-input type="Text"
+                   label="Enter your city"
+                   onkeyup={eventHandler}>
+                  </lightning-input>
+ My name is {Name}, I live in {city}              
+ </div>
+</lightning-card>
+<lightning-card title="Two Way Binding Vector (@track Decorator)">
+  <div class = "slds-var-m-around_medium ">
+  This is my 3rd example whic explains Two way Data Binding with the help of @track. 2nd example can display only single values (Scalor). Here we can display multiple values using @track Decorator
+  
+  <lightning-input type="Text"
+                   label="Enter your Address"
+                   onkeyup={trackHandler}>
+                  </lightning-input>
+ My name is {Name}, I live in {address.city}              
+ </div>
+</lightning-card>
+<lightning-card title="Conditional Example 7 ">
+  <div class="slds-m-around_medium">
+  <lightning-messages></lightning-messages>
+ <lightning-input title="User Name" label="User Name" onchange={cHandler} ></lightning-input>
+ <lightning-input   
+   type="password" 
+    label="Enter your password" 
+    name="input1"  
+    onchange={cHandler}
+  ></lightning-input> 
+  <div class="slds-m-around_medium">
+  <lightning-button
+  type="submit"
+  variant="brand"
+  name="submit"
+  label="Log in"></lightning-button>
+<template if:true={enteredData}>
+<div title="Log in" style="color: green; font-size:medium">{result}</div>
+</template>
+<template if:false={enteredData2}>
+  <div style="color: red; font-size:medium"> {result2} </div>
+  </template>
+</div>
+
+</lightning-button></div>
+</lightning-card>
+
+   
+</template>

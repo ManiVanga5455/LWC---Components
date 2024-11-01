@@ -1,0 +1,37 @@
+<template>
+    <lightning-card
+        title="RecordEditForm Dynamic Opportunity"
+        icon-name="standard:contact"
+        class="slds-card__body_inner">
+        <lightning-record-edit-form
+            object-api-name='Opportunity'
+            onsuccess={successHandler} 
+            onerror={errorHandler}
+            onsubmit={handleSubmit}>
+            
+            <!-- Input Fields for Opportunity -->
+            <lightning-input-field field-name={fields.name}></lightning-input-field>
+            <lightning-input-field field-name={fields.stageName}></lightning-input-field>
+            <lightning-input-field field-name={fields.accountName}></lightning-input-field>
+            <lightning-input-field field-name={fields.amount}></lightning-input-field>
+            <lightning-input-field field-name={fields.type}></lightning-input-field>
+            <lightning-input-field field-name={fields.closeDate}></lightning-input-field>
+
+            <!-- Buttons for Cancel and Save -->
+            <div class="slds-m-top_medium ">
+                <lightning-button
+                    class="slds-p-around_small"
+                    label="Cancel"
+                    variant="brand"
+                    onclick={handleReset}
+                ></lightning-button>
+                <lightning-button
+                    class="slds-p-around_small"
+                    type="submit"
+                    variant="brand"
+                    label="Save Record"
+                ></lightning-button>
+            </div>
+        </lightning-record-edit-form>
+    </lightning-card>
+</template>

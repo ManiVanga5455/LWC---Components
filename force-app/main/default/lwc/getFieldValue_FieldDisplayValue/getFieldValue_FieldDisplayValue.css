@@ -1,0 +1,12 @@
+/* getRecorduiAPI2024.css */
+.record-details {
+  background-color: #f4f6f9; /* Light background */
+  padding: 10px; /* Add padding */
+  border-radius: 5px; /* Rounded corners */
+  margin-top: 20px; /* Space above the div */
+}
+
+.record-details p {
+  font-weight: bold; /* Make the text bold */
+  color: #333; /* Text color */
+}

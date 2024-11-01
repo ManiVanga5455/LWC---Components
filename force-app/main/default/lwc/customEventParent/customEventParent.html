@@ -1,0 +1,29 @@
+<template>
+    <lightning-card title="Contact List">
+        <lightning-layout multiple-rows>
+            <!-- Contact List Column -->
+            <lightning-layout-item size="5" class="contact-list">
+                <template lwc:if={contacts.data}>
+                    <template for:each={contacts.data} for:item="contact" >
+                        <c-custom-event-child 
+                            key={contact.Id} 
+                            contact={contact} 
+                            oncontactclicked = {contactHandler}>
+                        </c-custom-event-child>
+                    </template>    
+                </template>
+            </lightning-layout-item>
+
+            <!-- Selected Contact Column -->
+            <lightning-layout-item size="7" class="selected-contact-details">
+                <template lwc:if={selectedContact}>
+                    <img src={selectedContact.PhotoUrl} alt="Profile photo" class="profile-photo"/>
+                    <p class="contact-name">{selectedContact.Name}</p>
+                    <p><lightning-formatted-email value={selectedContact.Email}></lightning-formatted-email></p>
+                    <p><lightning-formatted-phone value={selectedContact.Phone}></lightning-formatted-phone></p>
+                    <p>{selectedContact.AccountId}</p>
+                </template>
+            </lightning-layout-item>
+        </lightning-layout>
+    </lightning-card>
+</template>

@@ -1,0 +1,32 @@
+<template>
+    <lightning-card title="Imperative Apex Call">
+        <div class="slds-m-around_medium">
+            <!-- Input field for product name -->
+            <lightning-input type="text"
+                name="name"
+                label="Product Name"
+                value={name}
+                onchange={handleChange}>
+            </lightning-input>
+
+            <!-- Button to trigger the getProduct method -->
+            <div class="slds-m-top_small">
+                <lightning-button 
+                    label="Get Product" 
+                    onclick={getProduct}>
+                </lightning-button>
+            </div>
+
+            <!-- Datatable to display products -->
+            <div  class="slds-p-around_medium" style="height: 300px;">
+                <template if:true={products}>
+                    <lightning-datatable
+                        key-field="Id"
+                        data={products}
+                        columns={columns}>
+                    </lightning-datatable>
+                </template>
+            </div>
+        </div>
+    </lightning-card>
+</template>

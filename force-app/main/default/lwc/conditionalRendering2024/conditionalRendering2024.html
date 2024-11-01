@@ -1,0 +1,41 @@
+<template>
+    <lightning-card class="slds-p-around_small" icon-name="standard:collection" title="Conditional Rendering">
+        <!-- Name Input -->
+        <lightning-input class="slds-p-around_xxx-small"
+            type="text" 
+            label="Name" 
+            value={name} 
+            required 
+            onchange={handleChange}>
+        </lightning-input>
+
+        <!-- Password Input -->
+        <lightning-input class="slds-p-around_xxx-small"
+            type="password" 
+            label="Password" 
+            value={password} 
+            required 
+            onchange={handleChange}>
+        </lightning-input>
+
+        <!-- Checkbox -->
+        <lightning-input class="slds-p-around_small"
+            type="checkbox" 
+            label="I agree to the terms and conditions" 
+            checked={isChecked} 
+            onchange={toggle}>
+        </lightning-input>
+
+        <!-- Conditional Button Rendering -->
+        <template lwc:if={isChecked}>
+            <p class="slds-p-around_small">
+                <lightning-button label="Submit" variant="brand" class="slds-m-top_medium"></lightning-button>
+            </p>
+        </template>
+        <template lwc:else>
+            <p class="slds-p-around_small">
+                <lightning-button label="Submit" class="slds-m-top_medium" disabled></lightning-button>
+            </p>
+        </template>
+    </lightning-card>
+</template>

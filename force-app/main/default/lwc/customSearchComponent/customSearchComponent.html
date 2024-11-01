@@ -1,0 +1,70 @@
+<template>
+  <lightning-card class="slds-p-around_medium" title="Custom Account Record Search" >
+  <div class="slds-form-element">
+    <label class="slds-form-element__label slds-p-around_x-small" for="combobox-id-3" id="combobox-label-id-32"><b>{objectLabelName}</b></label>
+    <div class="slds-form-element__control">
+      <div class="slds-combobox_container">
+        <div class="slds-combobox slds-dropdown-trigger slds-dropdown-trigger_click slds-is-open slds-p-around_x-small">
+          
+          <!-- Conditionally show the selected record or input box for search -->
+          <template lwc:if={isRecordSelected}>
+            <!-- Selected Record View -->
+            <div class="slds-combobox__form-element slds-input-has-icon slds-input-has-icon_left-right" role="none">
+              <span class="slds-icon_container slds-icon-standard-account slds-combobox__input-entity-icon" title="Account">
+                <lightning-icon icon-name={iconName} size="small"></lightning-icon>
+              </span>
+              <div role="combobox" tabindex="0" class="slds-input_faux slds-combobox__input slds-combobox__input-value">
+                <span class="slds-truncate">{selectedRecord.selectedName}</span>
+              </div>
+              <button class="slds-button slds-button_icon slds-input__icon slds-input__icon_right" title="Remove selected option" onclick={removeHandler}>
+                <lightning-icon icon-name="utility:close" size="small"></lightning-icon>
+                <span class="slds-assistive-text">Remove selected option</span>
+              </button>
+            </div>
+          </template>
+
+          <!-- Search Input View -->
+          <template lwc:else>
+            <div class="slds-combobox__form-element slds-input-has-icon slds-input-has-icon_right" role="none">
+              <input
+                type="text"
+                class="slds-input slds-combobox__input slds-has-focus"
+                id="combobox-id-3"
+                aria-controls="listbox-id-3"
+                autocomplete="off"
+                placeholder="Search..."
+                onkeyup={changehandler}
+              />
+              <span class="slds-icon_container slds-icon-utility-search slds-input__icon slds-input__icon_right">
+                <lightning-icon icon-name="utility:search" size="x-small"></lightning-icon>
+              </span>
+            </div>
+          </template>
+
+          <!-- Listbox to show search results -->
+          <template lwc:if={displayRecordList}>
+            <div id="listbox-id-3" class="slds-dropdown slds-dropdown_length-with-icon-7 slds-dropdown_fluid" role="listbox">
+              <ul class="slds-listbox slds-listbox_vertical" role="presentation">
+                <template for:each={searchResults.data} for:item="record">
+                  <li key={record.Id} role="presentation" class="slds-listbox__item" data-item={record.Id} onclick={clickHandler}>
+                    <div aria-selected="true" class="slds-media slds-listbox__option slds-listbox__option_entity slds-listbox__option_has-meta">
+                      <span class="slds-media__figure slds-listbox__option-icon">
+                        <lightning-icon size="small" icon-name={iconName}></lightning-icon>
+                      </span>
+                      <span class="slds-media__body">
+                        <span class="slds-listbox__option-text slds-listbox__option-text_entity">{record.Name}</span>
+                        <span class="slds-listbox__option-meta slds-listbox__option-meta_entity">{objectLabelName}</span>
+                      </span>
+                    </div>
+                  </li>
+                </template>
+              </ul>
+            </div>
+          </template>
+
+        </div>
+      </div>
+    </div>
+  </div>
+  </lightning-card>
+</template>

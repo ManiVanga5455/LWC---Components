@@ -1,0 +1,15 @@
+<template>
+    <lightning-card title="Dynamic styles">
+        <div class="slds-var-m-around_medium">
+            <lightning-input  
+            type="number" 
+            value={p} 
+            label="Percentage"
+             onkeyup={changehandler}>
+            </lightning-input>
+            <div style={percantage} 
+            class="slds-notify slds-notify_alert slds-alert_error slds-theme_alert-texture" role="alert">This is Dynamic style example</div>
+        </div>
+    </lightning-card>
+    
+</template>

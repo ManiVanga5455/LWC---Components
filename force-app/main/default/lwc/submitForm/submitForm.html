@@ -1,0 +1,23 @@
+<template>
+    <div class="slds-m-around_medium">
+    <lightning-card title="Submition form" icon-name="custom:custom10">
+    <lightning-input type="text" label="Enter Name"></lightning-input>
+    <lightning-input type="text" label="Age"></lightning-input>
+    <lightning-input type="text" label="Date of Birth"></lightning-input>
+    <lightning-input type="checkbox" 
+    label="Click to submit the form" 
+    name="input1" 
+    onchange={clickHandler}
+    ></lightning-input>
+    <template lwc:if={display}>
+        <div class="slds-p-around_small">
+    <lightning-button variant="Brand"
+     label="Submit"
+     class="slds-p-around_medium"
+     onclick={submitHandler} 
+    ></lightning-button>
+</div>
+</template>
+</lightning-card> 
+</div>
+</template>

@@ -1,0 +1,43 @@
+<template>
+    <div class="slds-m-around_medium" style="display: inline-block;" >
+    <lightning-card title="Simple Demo Calculator" icon-name="standard:account">
+        <div class ="slds-m-around_medium">
+<lightning-input label="1st Value"
+
+                onchange={numHandler}>
+</lightning-input>
+<lightning-input label="2nd Value"
+                
+                onchange={numHandler}>
+</lightning-input>
+        </div>
+        <div class="slds-var-p-around_small">
+            <lightning-button label="Add"
+           variant="brand"
+            class ="slds-var-p-around_small"
+            onclick={calcHandler}>
+        </lightning-button>
+        <lightning-button label="Substract"
+        variant="brand"
+        class ="slds-var-p-around_small"
+       onclick={calcHandler}>
+    </lightning-button>
+    <lightning-button label="Multiply"
+    variant="brand"
+    class ="slds-var-p-around_small"
+    onclick={calcHandler}
+    >
+</lightning-button>
+<lightning-button label="Division"
+variant="brand"
+class ="slds-var-p-around_small"
+onclick={calcHandler}
+>
+</lightning-button>
+        </div>
+        <div class="slds-var-m-around_medium">
+           <p>{result}</p>
+        </div>
+    </lightning-card>
+</div>
+</template>

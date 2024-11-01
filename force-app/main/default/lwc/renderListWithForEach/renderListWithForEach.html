@@ -1,0 +1,14 @@
+<template>
+    <lightning-card title="Render List with For Each">
+     <lightning-layout>
+            <lightning-layout-item size="12">
+                <template for:each={cities} for:item="city">
+                    <li key={city}>
+                        <div >{city}</div>
+                    </li>
+                </template>
+                </lightning-layout-item>
+     </lightning-layout>
+    </lightning-card>
+    
+</template>

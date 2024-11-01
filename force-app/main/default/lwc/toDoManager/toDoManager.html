@@ -1,0 +1,61 @@
+<template>
+    <div class="slds-grid slds-gutters">
+        <div class="slds-col">
+            <lightning-card title="Add New Task">
+                <div class="slds-p-around_medium">
+                    <lightning-input label="Enter Task" 
+                    onchange={handleChange} 
+                    required="true"
+                    name="taskName" 
+                    type="text"
+                    value={taskName}
+                    class="taskName"
+                    message-when-value-missing="Enter Task Name">
+                    </lightning-input>
+                </div>
+                <div class="slds-p-around_medium">
+                    <lightning-input type="date" 
+                    label="Enter a date" 
+                    name="dueDate" 
+                    onchange={handleChange} 
+                    required="true"
+                    message-when-value-missing="Enter a Date"
+                    value={dueDate}
+                    field-level-help="Default End Date is Today">
+                    </lightning-input>
+                </div>
+                <div class="slds-p-around_small">
+                    <lightning-button 
+                    class="slds-p-around_small"
+                    label="Reset"
+                    variant="neutral" 
+                    icon-name-right="utility:close" 
+                    icon-position="right"
+                    value={dueDate}
+                    onclick={handleReset}>           i 
+                    </lightning-button>
+                    <lightning-button 
+                    class="slds-p-around_small"
+                    label="Add Task"
+                    variant="brand" 
+                    icon-name-right="utility:check" 
+                    icon-position="right"
+                    onclick={handleAdd}>
+                    </lightning-button>
+                </div>
+            </lightning-card>
+        </div>
+
+        <div class="slds-col">
+            <lightning-card title="To Do List">
+                <!-- Content for To Do List -->
+            </lightning-card>
+        </div>
+
+        <div class="slds-col">
+            <lightning-card title="Completed Tasks">
+                <!-- Content for Completed Tasks -->
+            </lightning-card>
+        </div>
+    </div>
+</template>

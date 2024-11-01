@@ -1,0 +1,51 @@
+<template>
+    <lightning-card  title="Conditional Rendering">
+        <div class="slds-var-m-around_medium">
+    <lightning-input type="text"
+        label="Enter Your Name"
+        onkeyup={changeHandler}>
+    </lightning-input>
+    
+    <template if:true={name}>
+    <div> This is true Part of the condition. </div>
+    </template>
+
+    <template if:false={name}>
+    <div> This is flase part of the condition. Please enter suitable name to open True part </div>
+    </template>
+        </div>
+    
+    </lightning-card>
+    <lightning-card title ="Example 3">
+        <div class="slds-var-m-around_medium">
+<lightning-button type ="radio"
+     label="Option 1"
+     onclick={optionsHandler}>
+</lightning-button>
+<lightning-button type ="radio"
+     label="Option 2"
+     onclick={optionsHandler2}>
+</lightning-button>
+        </div>
+
+        <template if:true={onselectoption1}>
+            <div> You have selected option 1</div>
+        </template>
+        <template if:true={onselectoption2}>
+            <div> You have selected option 2</div>
+        </template>
+    </lightning-card>
+    <lightning-card title="Lightning ComboBox">
+        <div class="slds-m-around_medium">
+            <lightning-combobox
+            name="progress"
+            label="Status"
+            value={value}
+            placeholder="Select Progress"
+            options={options}
+            onchange={handleChange} ></lightning-combobox>
+        </div>
+        <div class="slds-m-around_medium" style="color: firebrick;"><b>{value}</b></div>
+    </lightning-card>
+    
+</template>

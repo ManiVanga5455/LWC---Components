@@ -1,0 +1,20 @@
+<template>
+<lightning-card class="slds-m-var-medium" title="Api Decorator Parent to Child composition" icon-name="standard:collection">
+    <lightning-input class="slds-m-left_small" type="text" label="Name" onchange={handleNameChange}></lightning-input>
+    <lightning-input class="slds-m-left_small" type="text" label="Role" onchange={handleRoleChange}></lightning-input>
+    <lightning-input class="slds-m-left_small" type="phone" label="Phone" onchange={handlePhoneChange}></lightning-input>
+    <lightning-input class="slds-m-left_small" type="email" label="Email" onchange={handleEmailChange}></lightning-input>
+    <div class="slds-m-top_medium">
+    <lightning-button class="slds-m-left_small" variant="brand" label="Submit" onclick={handleSubmit}></lightning-button>
+    </div>
+    
+    <!-- Passing info object and greeting to child component -->
+<div class="slds-m-top_medium">
+    <c-api-child-decorator 
+class="slds-show slds-is-relative"
+display-greeting={greeting}
+info={info}
+    ></c-api-child-decorator>
+</div>
+</lightning-card>
+</template>

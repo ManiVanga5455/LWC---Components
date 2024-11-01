@@ -1,0 +1,24 @@
+<template>
+    <lightning-layout >
+        <lightning-layout-item
+            padding="around-small"
+            size="4">
+            <c-custom-search-component
+            api-object-name = 'Account'
+            object-label-name='Account'
+            icon-name = 'standard:account'
+            onselected = {selectedHandler}>
+            </c-custom-search-component>
+        </lightning-layout-item>
+        <lightning-layout-item
+        padding="around-small"
+        class="button" size="4">
+            <lightning-button
+                label="Create Contact"
+                variant="brand"
+                disabled={isDisabled}
+                onclick={handleCreateContact}>
+            </lightning-button>
+        </lightning-layout-item>
+    </lightning-layout>
+</template>

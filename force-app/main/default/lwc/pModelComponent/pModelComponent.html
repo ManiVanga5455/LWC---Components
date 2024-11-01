@@ -1,0 +1,16 @@
+<template>
+    <lightning-card title="Child to Parent Modal Component">
+        <div class="slds-m-around_medium">
+            <lightning-input label="Name" type="text"></lightning-input>
+            <lightning-input label="Age" type="number"></lightning-input></div>
+       <div class="slds-m-around__small">
+            <lightning-input label="Click here to read Terms&Conditions"
+             type="checkbox" onclick={clickHandler} ></lightning-input>
+        </div>
+    <div>
+        <template if:true={open}>
+            <c-child-one-modal onclose={closeHandler}></c-child-one-modal>
+        </template> 
+    </div>
+        </lightning-card>
+</template>

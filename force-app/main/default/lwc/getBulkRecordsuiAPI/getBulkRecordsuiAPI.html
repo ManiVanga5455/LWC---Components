@@ -1,0 +1,22 @@
+<template>
+    <lightning-card title="Fetch Bulk Records">
+        <div class="slds-m-around_medium">
+            <lightning-input
+                label="Enter Contact IDs (comma-separated)"
+                onchange={handleRecordIdChange}
+                placeholder="e.g., 0030600002CN1fwAAD, 003J6000002E9ZeIAK"
+            ></lightning-input>
+        </div>
+        <template if:true={records.length}>
+            <ul class="slds-list_dotted">
+                <template for:each={records} for:item="record">
+                    <li key={record.Id}>
+                        <strong>Last Name:</strong> {record.LastName} <br />
+                        <strong>Email:</strong> {record.Email} <br />
+                        <strong>Account ID:</strong> {record.AccountId}
+                    </li>
+                </template>
+            </ul>
+        </template>
+    </lightning-card>
+</template>

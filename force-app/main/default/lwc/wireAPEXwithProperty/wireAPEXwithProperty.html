@@ -1,0 +1,13 @@
+<template>
+    <lightning-card title="Wire Apex with Property">
+       
+            <lightning-datatable
+                data={contactList.data}
+                columns={columns}
+                key-field="Id"
+                onrowselection={getSelectedName}
+            >
+            </lightning-datatable>
+    
+    </lightning-card>
+</template>

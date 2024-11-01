@@ -1,0 +1,18 @@
+<template>
+     <lightning-card title="Percentage Meter"
+     icon-name="custom:custom45">
+        <div class="slds-m-around_medium">
+            <lightning-input
+            label="Percentage"
+            type="number"
+            value={pValue}
+            onkeyup={handlePercentageChange}>
+        </lightning-input>
+        </div>
+        <c-child-percentage
+            percentage-value={pValue}>
+        </c-child-percentage>
+    </lightning-card>
+        
+       
+</template>

@@ -1,0 +1,63 @@
+<template>
+    <lightning-card title="Create New Contact" icon-name="standard:contact">
+        <!-- Add padding around the form elements -->
+        <div class="slds-p-around_medium">
+            <lightning-input 
+                label="First Name" 
+                name="firstName" 
+                onchange={handleChange}
+                class="validate"
+                required>
+            </lightning-input>
+
+            <lightning-input 
+                label="Last Name" 
+                name="lastName" 
+                onchange={handleChange}
+                class="validate"
+                required>
+            </lightning-input>
+            
+            <template if:true={statusOptions.data}>
+             <lightning-radio-group 
+                 label="Active Status" 
+                 options={statusOptions.data.values} 
+                 name="status" 
+                 class="validate"
+                 type="radio" 
+                 onchange={handleChange}>
+             </lightning-radio-group>
+                 </template>
+
+            <!-- Stage__c Picklist as Radio Buttons -->
+            <template if:true={stageOptions.data}>
+                <lightning-radio-group 
+                    label="Stage" 
+                    options={stageOptions.data.values} 
+                    name="stage" 
+                    class="validate"
+                    type="radio"
+                    onchange={handleChange}>
+                </lightning-radio-group>
+            </template>
+
+            <!-- LeadSource as Radio Buttons -->
+            <template if:true={leadSourceOptions.data}>
+                <lightning-radio-group 
+                    label="Lead Source" 
+                    options={leadSourceOptions.data.values} 
+                    name="leadSource" 
+                    type="button"
+                    class="validate"
+                    onchange={handleChange}>
+                </lightning-radio-group>
+            </template>
+
+            <!-- Button Section -->
+            <div class="slds-m-top_medium ">
+                <lightning-button label="Cancel" class="slds-p-around_medium" onclick={handleCancel}></lightning-button>
+                <lightning-button label="Create Contact" class="slds-p-around_medium" variant="brand" onclick={handleSubmit}></lightning-button>
+            </div>
+        </div>
+    </lightning-card>
+</template>

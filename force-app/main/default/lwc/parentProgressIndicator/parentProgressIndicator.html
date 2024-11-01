@@ -1,0 +1,23 @@
+<template>
+
+<lightning-card title="Progress-Indicator">
+    <div class="slds-m-around_medium">
+        <lightning-combobox
+        name="progress"
+        label="Stage Name"
+        value={value}
+        placeholder="Select Stage"
+        options={options}
+      ></lightning-combobox>
+    </div>
+
+    <lightning-button variant="brand" label="Save" onclick={clickHandler}></lightning-button>
+
+   
+
+    <c-child-progress-indicator
+    stage-value={value}>
+</c-child-progress-indicator>
+
+</lightning-card>
+</template>

@@ -1,0 +1,24 @@
+<template>
+    <lightning-combobox
+    label="Select Here"
+    options={options}
+    value={selectedValue}
+    onchange={changeHnadler}>
+</lightning-combobox>
+
+<template if:true={personalDetails}>
+    <lightning-input label="Full Name"></lightning-input>
+    <lightning-input label="Phone"></lightning-input>
+    <lightning-input label="Email"></lightning-input></template>
+<template if:true={additionalDetails}>
+    <lightning-input label="Aadhar Number"></lightning-input>
+    <lightning-input label="Pan Number"></lightning-input>
+    <lightning-input label="City"></lightning-input>
+    <lightning-input label="State"></lightning-input>
+    <lightning-input label="Country"></lightning-input>
+</template>
+
+<div class="slds-m-around_medium">
+    <lightning-button label="Submit" variant="Brand"></lightning-button>
+</div>
+</template>
