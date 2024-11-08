@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<LightningComponentBundle xmlns="http://soap.sforce.com/2006/04/metadata">
+    <apiVersion>62.0</apiVersion>
+    <isExposed>true</isExposed>
+    <targets>
+        <target>lightning__FlowScreen</target>
+    </targets>
+    <targetConfigs>
+        <targetConfig targets="lightning__FlowScreen">
+            <!-- Define 'contacts' property to accept an array of SObject records -->
+<propertyType extends="Sobject" name="T" label="Input Lable "/>   
+<property name="contacts" type="{T[]}" label="Contacts" role="inputOnly" />  
+        </targetConfig>
+    </targetConfigs>
+</LightningComponentBundle>
+
+<!-- 
+ <?xml version="1.0" encoding="UTF-8"?>
+<LightningComponentBundle xmlns="http://soap.sforce.com/2006/04/metadata">
+    <apiVersion>62.0</apiVersion>
+    <isExposed>true</isExposed>
+    <targets>
+        <target>lightning__FlowScreen</target>
+    </targets>
+    <targetConfigs>
+        <targetConfig targets="lightning__FlowScreen">
+         <propertyType extends="Sobject" name="T" label="Input Lable "/>   
+         <property name="contacts" type="{T[]}" label="Contacts" role="inputOnly" />  
+        
+        </targetConfig>
+    </targetConfigs>
+</LightningComponentBundle>
+
+ -->
