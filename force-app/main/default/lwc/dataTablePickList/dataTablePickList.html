@@ -1,0 +1,16 @@
+<template>
+  <lightning-card title="Datatable PickList" icon-name="custom:custom63">
+    <div class="slds-m-around_medium">
+      <template lwc:if={contactData}>
+        <c-custom-data-type
+          key-field="Id"
+          data={contactData}
+          columns={columns}
+          onsave={saveHandler}
+          draft-values={draftValues}
+        >
+        </c-custom-data-type>
+      </template>
+    </div>
+  </lightning-card>
+</template>

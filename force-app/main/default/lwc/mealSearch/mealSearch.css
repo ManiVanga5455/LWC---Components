@@ -1,0 +1,76 @@
+/* Hero Section */
+.hero-section {
+  background-image: url("/resource/MealDB"); /* Ensure the path is correct */
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+  height: 400px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 20px;
+  position: relative; /* Ensures positioning of content */
+  color: white;
+  text-shadow: 0 4px 6px rgba(0, 0, 0, 0.4); /* Adds readability on bright backgrounds */
+}
+
+.hero-content {
+  background: rgba(0, 0, 0, 0.5);
+  padding: 20px;
+  border-radius: 8px;
+  width: 100%;
+  max-width: 500px;
+  text-align: center;
+  color: black;
+}
+.hero-title {
+  font-size: 36px;
+  font-weight: bold;
+  /* For IE 11 */
+  display: -webkit-box;
+  -webkit-line-clamp: 3;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+}
+.slds-grid {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+}
+
+.slds-wrap {
+  flex-wrap: wrap;
+}
+
+.slds-col {
+  display: flex;
+  justify-content: center;
+  padding: 10px;
+}
+
+/* Adjusting the width for input and button */
+.slds-medium-size_6-of-12,
+.slds-large-size_8-of-12 {
+  max-width: 100%; /* Make sure input stretches on smaller screens */
+}
+
+.slds-medium-size_6-of-12 {
+  width: 100%; /* Input field should take the full width */
+}
+
+.slds-large-size_4-of-12 {
+  width: 100%; /* Button should be next to the input */
+}
+
+lightning-input,
+lightning-button {
+  width: 100%; /* Ensure both input and button stretch properly within their containers */
+}
+
+/* Button Styling */
+lightning-button {
+  border-radius: 5px;
+  padding: 10px;
+  cursor: pointer;
+}

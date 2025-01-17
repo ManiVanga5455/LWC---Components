@@ -1,0 +1,20 @@
+<template>
+        <div class=" hero-section">
+            <div class="hero-content">
+                <h1 class="hero-title">Meal Hunter Project By Mani</h1>
+                    <div class="slds-grid slds-wrap slds-grid_align-center">
+                            <div class="slds-col slds-size_1-of-1 slds-medium-size_6-of-12 slds-large-size_8-of-12">
+                                <lightning-input label="Search" 
+                                placeholder="Enter meal name" 
+                                onchange={handleSearch}
+                                variant="brand"></lightning-input>
+                            </div>
+                            <div class="slds-col slds-size_1-of-1 slds-medium-size_6-of-12 slds-large-size_4-of-12">
+                            <lightning-button label="Search" 
+                                variant="destructive" 
+                                onclick={clickHandler}>Search</lightning-button>
+                            </div>
+                    </div>
+            </div>
+            </div>
+</template>
